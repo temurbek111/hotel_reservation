@@ -7,7 +7,7 @@ import TripsDashboard from './components/TripsDashboard';
 import HostDashboard from './components/HostDashboard';
 import { mockListings } from './data/mockListings';
 
-const API_BASE_URL = 'http://localhost:8001/api';
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8001/api').replace(/\/$/, '');
 
 export default function App() {
   // Navigation & Routing States
